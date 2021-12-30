@@ -1,11 +1,11 @@
 <<<<<<< HEAD
---Ñîçäàòü òàáëèöó employees
+--Ð¡Ð¾Ð·Ð´Ð°Ñ‚ÑŒ Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ñƒ employees
 create table employees(
 	id serial primary key,
 	employee_name varchar(50) not null
 );
 select * from employees;
---Íàïîëíèòü òàáëèöó employee 70 ñòðîêàìè
+--ÐÐ°Ð¿Ð¾Ð»Ð½Ð¸Ñ‚ÑŒ Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ñƒ employee 70 ÑÑ‚Ñ€Ð¾ÐºÐ°Ð¼Ð¸
 insert into employees(employee_name)
 values  ('Kalenik Alexandra'),
 		('Ivanov Ivan'),
@@ -78,13 +78,13 @@ values  ('Kalenik Alexandra'),
 		('Borisov Boris'),
 		('Varlamov Ivan');
 
---Ñîçäàòü òàáëèöó salary
+--Ð¡Ð¾Ð·Ð´Ð°Ñ‚ÑŒ Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ñƒ salary
 create table salary(
 	id serial primary key,
 	monthly_salary int not null
 );
 select * from salary;
---Íàïîëíèòü òàáëèöó salary 15 ñòðîêàìè:
+--ÐÐ°Ð¿Ð¾Ð»Ð½Ð¸Ñ‚ÑŒ Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ñƒ salary 15 ÑÑ‚Ñ€Ð¾ÐºÐ°Ð¼Ð¸:
 insert into salary(monthly_salary)
 values 	(1000),
 		(1100),
@@ -102,7 +102,7 @@ values 	(1000),
 		(2300),
 		(2500);
 
---Ñîçäàòü òàáëèöó employee_salary
+--Ð¡Ð¾Ð·Ð´Ð°Ñ‚ÑŒ Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ñƒ employee_salary
 create table employee_salary(
 	id serial primary key,
 	employee_id int unique not null ,
@@ -155,16 +155,16 @@ values 	(3,7),
 		(79,11),
 		(80,1);
 
---Ñîçäàòü òàáëèöó roles
+--Ð¡Ð¾Ð·Ð´Ð°Ñ‚ÑŒ Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ñƒ roles
 create table roles(
 	id serial primary key,
 	role_name int not null unique
 );
 select * from roles;
---Ïîìåíÿòü òèï ñòîëáà role_name ñ int íà varchar(30)
+--ÐŸÐ¾Ð¼ÐµÐ½ÑÑ‚ÑŒ Ñ‚Ð¸Ð¿ ÑÑ‚Ð¾Ð»Ð±Ð° role_name Ñ int Ð½Ð° varchar(30)
 alter table roles 
 alter column role_name type varchar(30) using role_name::int;
---Íàïîëíèòü òàáëèöó roles 20 ñòðîêàìè
+--ÐÐ°Ð¿Ð¾Ð»Ð½Ð¸Ñ‚ÑŒ Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ñƒ roles 20 ÑÑ‚Ñ€Ð¾ÐºÐ°Ð¼Ð¸
 insert into roles(role_name)
 values 	('Junior Python developer'),
 		('Middle Python developer'),
@@ -187,7 +187,7 @@ values 	('Junior Python developer'),
 		('Middle Automation QA engineer'),
 		('Senior Automation QA engineer');
 
---Ñîçäàòü òàáëèöó roles_employee
+--Ð¡Ð¾Ð·Ð´Ð°Ñ‚ÑŒ Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ñƒ roles_employee
 create table roles_employee(
 	id serial primary key,
 	employee_id int not null unique,
@@ -198,7 +198,7 @@ create table roles_employee(
 		references roles(id)
 );
 select * from roles_employee;
---Íàïîëíèòü òàáëèöó roles_employee 40 ñòðîêàìè
+--ÐÐ°Ð¿Ð¾Ð»Ð½Ð¸Ñ‚ÑŒ Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ñƒ roles_employee 40 ÑÑ‚Ñ€Ð¾ÐºÐ°Ð¼Ð¸
 insert into roles_employee(employee_id,role_id)
 values 	(3,7),
 		(1,4),
@@ -251,13 +251,13 @@ values 	(3,7),
 
 
 =======
---Ñîçäàòü òàáëèöó employees
+--Ð¡Ð¾Ð·Ð´Ð°Ñ‚ÑŒ Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ñƒ employees
 create table employees(
 	id serial primary key,
 	employee_name varchar(50) not null
 );
 select * from employees;
---Íàïîëíèòü òàáëèöó employee 70 ñòðîêàìè
+--ÐÐ°Ð¿Ð¾Ð»Ð½Ð¸Ñ‚ÑŒ Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ñƒ employee 70 ÑÑ‚Ñ€Ð¾ÐºÐ°Ð¼Ð¸
 insert into employees(employee_name)
 values  ('Kalenik Alexandra'),
 		('Ivanov Ivan'),
@@ -330,13 +330,13 @@ values  ('Kalenik Alexandra'),
 		('Borisov Boris'),
 		('Varlamov Ivan');
 
---Ñîçäàòü òàáëèöó salary
+--Ð¡Ð¾Ð·Ð´Ð°Ñ‚ÑŒ Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ñƒ salary
 create table salary(
 	id serial primary key,
 	monthly_salary int not null
 );
 select * from salary;
---Íàïîëíèòü òàáëèöó salary 15 ñòðîêàìè:
+--ÐÐ°Ð¿Ð¾Ð»Ð½Ð¸Ñ‚ÑŒ Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ñƒ salary 15 ÑÑ‚Ñ€Ð¾ÐºÐ°Ð¼Ð¸:
 insert into salary(monthly_salary)
 values 	(1000),
 		(1100),
@@ -354,7 +354,7 @@ values 	(1000),
 		(2300),
 		(2500);
 
---Ñîçäàòü òàáëèöó employee_salary
+--Ð¡Ð¾Ð·Ð´Ð°Ñ‚ÑŒ Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ñƒ employee_salary
 create table employee_salary(
 	id serial primary key,
 	employee_id int unique not null ,
@@ -407,16 +407,16 @@ values 	(3,7),
 		(79,11),
 		(80,1);
 
---Ñîçäàòü òàáëèöó roles
+--Ð¡Ð¾Ð·Ð´Ð°Ñ‚ÑŒ Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ñƒ roles
 create table roles(
 	id serial primary key,
 	role_name int not null unique
 );
 select * from roles;
---Ïîìåíÿòü òèï ñòîëáà role_name ñ int íà varchar(30)
+--ÐŸÐ¾Ð¼ÐµÐ½ÑÑ‚ÑŒ Ñ‚Ð¸Ð¿ ÑÑ‚Ð¾Ð»Ð±Ð° role_name Ñ int Ð½Ð° varchar(30)
 alter table roles 
 alter column role_name type varchar(30) using role_name::int;
---Íàïîëíèòü òàáëèöó roles 20 ñòðîêàìè
+--ÐÐ°Ð¿Ð¾Ð»Ð½Ð¸Ñ‚ÑŒ Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ñƒ roles 20 ÑÑ‚Ñ€Ð¾ÐºÐ°Ð¼Ð¸
 insert into roles(role_name)
 values 	('Junior Python developer'),
 		('Middle Python developer'),
@@ -439,7 +439,7 @@ values 	('Junior Python developer'),
 		('Middle Automation QA engineer'),
 		('Senior Automation QA engineer');
 
---Ñîçäàòü òàáëèöó roles_employee
+--Ð¡Ð¾Ð·Ð´Ð°Ñ‚ÑŒ Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ñƒ roles_employee
 create table roles_employee(
 	id serial primary key,
 	employee_id int not null unique,
@@ -450,7 +450,7 @@ create table roles_employee(
 		references roles(id)
 );
 select * from roles_employee;
---Íàïîëíèòü òàáëèöó roles_employee 40 ñòðîêàìè
+--ÐÐ°Ð¿Ð¾Ð»Ð½Ð¸Ñ‚ÑŒ Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ñƒ roles_employee 40 ÑÑ‚Ñ€Ð¾ÐºÐ°Ð¼Ð¸
 insert into roles_employee(employee_id,role_id)
 values 	(3,7),
 		(1,4),
